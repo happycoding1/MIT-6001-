@@ -2,7 +2,7 @@ low = 0
 mid = 50
 high = 100
 secretnum = "Is your secret number: "
-print"Please think of a number between 0 and 100!"
+print ("Please think of a number between 0 and 100!")
 print secretnum + str(mid) + "?"
 guess = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. ")
 while (guess != 'c'):
