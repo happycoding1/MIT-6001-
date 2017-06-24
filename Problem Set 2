@@ -78,7 +78,7 @@ monthlyInterestRate = annualInterestRate/12
 
 while balance > 0:
 	for i in range(12):
-		balance = balance - monthlyPayment + ((balance - monthlyPayment) * monthlyInterestRate)
+		balance = balance - monthlyFixedPayment + ((balance - monthlyFixedPayment) * monthlyInterestRate)
 	if balance > 0:
 		monthlyPayment += 10
 		tmpBalance = balance 
