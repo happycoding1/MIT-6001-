@@ -72,6 +72,26 @@ Test Cases to Test Your Code With. Be sure to test these on your own machine - a
 
 
 
+monthlyPayment = 0
+tmpBalance = balance
+monthlyInterestRate = annualInterestRate/12
+
+while balance > 0:
+	for i in range(12):
+		balance = balance - monthlyPayment + ((balance - monthlyPayment) * monthlyInterestRate)
+	if balance > 0:
+		monthlyPayment += 10
+		tmpBalance = balance 
+	elif balance <= 0:
+		break
+print('Lowest Payment:', monthlyPayment)
+
+
+
+And here is a walkthrough for Problem #2.
+https://www.youtube.com/watch?v=sCRvoxedRhg
+As always, all posted walkthroughs can be accessed from the following playlist:
+https://www.youtube.com/playlist?list=PL4e66Kzl1JCF0rL_uq-w2yPBP3mDsm7iD
 
 
 
