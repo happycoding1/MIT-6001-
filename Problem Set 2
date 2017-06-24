@@ -71,9 +71,8 @@ Test Cases to Test Your Code With. Be sure to test these on your own machine - a
 
 
 
-
-monthlyPayment = 0
-tmpBalance = balance
+monthlyFixedPayment = 0
+initBalance = balance
 monthlyInterestRate = annualInterestRate/12
 
 while balance > 0:
@@ -81,10 +80,10 @@ while balance > 0:
 		balance = balance - monthlyFixedPayment + ((balance - monthlyFixedPayment) * monthlyInterestRate)
 	if balance > 0:
 		monthlyPayment += 10
-		tmpBalance = balance 
-	elif balance <= 0:
+		blance = initBalance 
+	else:
 		break
-print('Lowest Payment:', monthlyPayment)
+print('Lowest Payment:', round(monthlyFixedPayment, 2))
 
 
 
