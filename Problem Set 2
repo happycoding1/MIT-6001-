@@ -127,20 +127,18 @@ Note that if you do not use bisection search, your code will not run - your code
 
 
 monthlyInterestRate = annualInterestRate/12.0
-lower = blance/12
-upper= blance*(1+ monthlyInterestRate)**12 / 12.0
+lower = balance/12
+upper= balance*(1+ monthlyInterestRate)**12 / 12.0
 mid= (upper+ lower)/2
 
 while (balance != 0):
-    blance = initBlance
-    monthlyFixedPayment = mid
-    
-    for i in range (12):
-        blance = (blance - monthlyFixedPayment)*(1+monmthlyInterestRate)
-    if blance > 0.001:
-        lower = mid
-    if balance < 0.001:
-        upper = mid
+    balance= initBalance
+    monthlyFixedPayment = mid
+    
+    for i in range (12):
+        balance= (balance - monthlyFixedPayment)*(1+monmthlyInterestRate)
+    if balance> 0.001:
+        lower = mid     #need to set it to a higher payment
+    if balance < 0.001:
+        upper = mid     #set it to a lower payment
 print ("Lowest Payment ", round(monthlyFixedPayment, 2))
-
-
