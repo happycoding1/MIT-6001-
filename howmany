@@ -1,0 +1,50 @@
+
+Exercise: how many
+5/5 points (graded)
+ESTIMATED TIME TO COMPLETE: 6 minutes
+
+Consider the following sequence of expressions:
+
+animals = { 'a': ['aardvark'], 'b': ['baboon'], 'c': ['coati']}
+
+animals['d'] = ['donkey']
+animals['d'].append('dog')
+animals['d'].append('dingo')
+We want to write some simple procedures that work on dictionaries to return information.
+
+First, write a procedure, called how_many, which returns the sum of the number of values associated with a dictionary. For example:
+
+>>> print(how_many(animals))
+6
+
+
+
+
+
+Codes:
+
+animals = { 'a': 'aardvark', 'b': ['baboon'], 'c': ['coati']}
+animals['d'] = ['donkey']
+animals['d'].append('dog')
+animals['d'].append('dingo')
+print (animals)
+
+def how_many(aDict):
+	result = 0
+	for value in aDict.values():	
+		result += len(value)
+		print("len(value) = ", len(value))	 
+	return result
+print(how_many(animals))
+
+
+
+output:
+
+{'a': ['aardvark'], 'b': ['baboon'], 'c': ['coati'], 'd': ['donkey', 'dog', 'dingo']}
+len(value) =  1
+len(value) =  1
+len(value) =  1
+len(value) =  3
+6
+
