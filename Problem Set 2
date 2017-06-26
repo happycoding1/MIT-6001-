@@ -32,12 +32,11 @@ Test Cases to Test Your Code With. Be sure to test these on your own machine - a
 
 
 
-
-```python
+ 
 for i in range(12):
     balance = balance - (balance * monthlyPaymentRate) + ((balance - (balance * monthlyPaymentRate)) * (annualInterestRate/12))
 print("Remaining balance:", round(balance, 2))
-```
+ 
 
 
 
